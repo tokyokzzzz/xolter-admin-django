@@ -10,5 +10,7 @@ services:
     volumes:
       - ./db.sqlite3:/app/db.sqlite3
       - ./accounts:/app/accounts
+    env_file:
+      - .env
     environment:
       - DEBUG=False
