@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   django-api:
     build: .
@@ -8,9 +6,12 @@ services:
     ports:
       - "8001:8001"
     volumes:
-      - ./db.sqlite3:/app/db.sqlite3
       - ./accounts:/app/accounts
+      - django_db:/app/data
     env_file:
       - .env
     environment:
       - DEBUG=False
+
+volumes:
+  django_db:
