@@ -56,3 +56,4 @@ python manage.py runserver 0.0.0.0:8001
 2. Admin approves in `/admin/` → status `APPROVED`
 3. Supervisor logs in → receives JWT
 4. FastAPI calls `/api/verify-token/` to validate each request
+# xolter-admin-django
