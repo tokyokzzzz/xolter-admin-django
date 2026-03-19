@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  django-api:
+    build: .
+    container_name: holter-django
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./accounts:/app/accounts
+    environment:
+      - DEBUG=False
